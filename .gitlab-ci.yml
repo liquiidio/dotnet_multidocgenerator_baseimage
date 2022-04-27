@@ -5,7 +5,7 @@ docker-build:
   services:
     - docker:dind
   before_script:
-    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
   script:
-    - docker build --build-arg DOCKER_VERSION=$DOCKER_VERSION -t $CI_REGISTRY/liquiduniverse/doc-gen:latest .
-    - docker push $CI_REGISTRY/liquiduniverse/doc-gen:latest
+    - docker build --build-arg DOCKER_VERSION=$DOCKER_VERSION -t $CI_REGISTRY/liquiduniverse/docgen:latest .
+    - docker push $CI_REGISTRY/liquiduniverse/docgen:latest
