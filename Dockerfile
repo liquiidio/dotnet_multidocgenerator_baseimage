@@ -6,7 +6,7 @@ ARG CMAKE_VERSION=3.19.2
 
 # Install required packages
 RUN apt-get update && apt-get -y install software-properties-common
-RUN add-apt-repository ppa:ubuntu-toolchain-r/test && apt-get update && apt-get -y install gcc-9 g++-9 build-essential make libc6 curl pkg-config zip tar unzip git wget
+RUN add-apt-repository ppa:ubuntu-toolchain-r/test && apt-get update && apt-get -y install gcc-9 g++-9 build-essential make libc6 curl pkg-config npm zip tar unzip git wget
 
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
 
