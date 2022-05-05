@@ -6,6 +6,8 @@ git clone https://github.com/microsoft/vcpkg
 git clone https://github.com/matusnovak/doxybook2.git
 cd doxybook2
 
+git checkout tags/v1.4.0
+
 # Install dependencies via vcpkg
 # The 'vcpkg.txt' file contains the list of dependencies to install
 ../vcpkg/vcpkg install --triplet x64-linux $(cat vcpkg.txt)
