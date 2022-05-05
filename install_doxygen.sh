@@ -1,4 +1,4 @@
-apt-get update && apt-get install -y software-properties-common && apt-add-repository universe #&& apt-get update && apt-get install -y doxygen
+apt-get update && apt-get install -y software-properties-common && apt-add-repository universe && apt-get update && apt-get install -y flex bison
 
 #download doxygen
 git clone https://github.com/doxygen/doxygen.git
