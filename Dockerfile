@@ -24,6 +24,8 @@ RUN chmod u+x /install_doxybook2.sh && /install_doxybook2.sh && rm -f install_do
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install libusb-1.0-0 libcurl3-gnutls libpq5 openssl tar ca-certificates clang-7 && rm -rf /var/lib/apt/lists/*
 
+RUN wget https://packages.microsoft.com/config/ubuntu/19.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && dpkg -i packages-microsoft-prod.deb && rm packages-microsoft-prod.deb
+
 RUN apt-get update; \
   apt-get install -y apt-transport-https && \
   apt-get update && \
