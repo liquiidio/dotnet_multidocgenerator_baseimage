@@ -24,10 +24,10 @@ RUN chmod u+x /install_doxybook2.sh && /install_doxybook2.sh && rm -f install_do
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install libusb-1.0-0 libcurl3-gnutls libpq5 openssl tar ca-certificates clang-7 && rm -rf /var/lib/apt/lists/*
 
-RUN sudo apt-get update; \
-  sudo apt-get install -y apt-transport-https && \
-  sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-3.1
+RUN apt-get update; \
+  apt-get install -y apt-transport-https && \
+  apt-get update && \
+  apt-get install -y dotnet-sdk-3.1
 
 # Install docker cli
 RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz \
